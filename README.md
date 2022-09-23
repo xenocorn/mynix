@@ -1,0 +1,2 @@
+# mynix
+My NixOs configuration
