@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 
 let
-  constants = import /etc/nixos/nixos_host_config/constants.nix;
+  constants = import ./constants.nix;
 in
 {
   imports = [
