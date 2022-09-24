@@ -88,7 +88,7 @@ in
   #};
 
   users = {
-    mutableUsers = false;
+    mutableUsers = true;
     users.admin = {
       isNormalUser = true;
       extraGroups = [ 
