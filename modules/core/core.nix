@@ -454,12 +454,21 @@ in
   
   systemd.services.basegitsetup = {
     script = ''
-      git=${pkgs.git} && $git/bin/git config --system http.proxy socks5://127.0.0.1:0 && $git/bin/git config --system user.name "John Doe" && $git/bin/git config --system user.email "" && $git/bin/git config --system core.excludesfile "/etc/gitignore" &&  $git/bin/git config --global core.editor "nano"
+      git=${pkgs.git} && $git/bin/git config --system http.proxy "" && $git/bin/git config --system user.name "John Doe" && $git/bin/git config --system user.email "" && $git/bin/git config --system core.excludesfile "/etc/gitignore" &&  $git/bin/git config --global core.editor "nano"
     '';
     wantedBy = [ "multi-user.target" ];
     after = [ "network.target" ];
     serviceConfig = {User = "root";};
   };
+
+  #systemd.services.basegitsetup = {
+  #  script = ''
+  #    git=${pkgs.git} && $git/bin/git config --system http.proxy socks5://127.0.0.1:0 && $git/bin/git config --system user.name "John Doe" && $git/bin/git config --system user.email "" && $git/bin/git config --system core.excludesfile "/etc/gitignore" &&  $git/bin/git config --global core.editor "nano"
+  #  '';
+  #  wantedBy = [ "multi-user.target" ];
+  #  after = [ "network.target" ];
+  #  serviceConfig = {User = "root";};
+  #};
 
   home-manager.useUserPackages = true;
   home-manager.useGlobalPkgs = true;
