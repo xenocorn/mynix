@@ -319,7 +319,6 @@ in
     bc
     openssl
     powertop
-    telnet
     jq
     yq
     #lsix
