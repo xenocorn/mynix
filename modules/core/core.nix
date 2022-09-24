@@ -380,7 +380,7 @@ in
     sl
     pipes
     tty-clock
-    cbonsa
+    cbonsai
 
     # Dev
     ansible
