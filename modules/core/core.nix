@@ -6,7 +6,7 @@ in
 {
   imports = [
     ./scripts.nix
-    ../../channels/hm/a8d00f5c038cf7ec54e7dac9c57b171c1217f008/chnl/nixos
+    ../../channels/hm/a8d00f5c038cf7ec54e7dac9c57b171c1217f008/chnl/nixos/default.nix
   ];
 
   security.allowSimultaneousMultithreading = true;
