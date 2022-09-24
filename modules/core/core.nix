@@ -306,7 +306,7 @@ in
     sshpass
     ripgrep #rg
     links2
-    ping
+    inetutils
     killall
     xclip
     flameshot
